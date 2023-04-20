@@ -1,26 +1,40 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <title>Happy Birthday</title>
     <style>
-      h1, p {
-        text-align: center;
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      #container {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
       pre {
         font-family: monospace;
         color: red;
         font-size: 5vw;
         line-height: 0.5;
+        text-align: center;
+        display: block;
       }
+
       h1,
       p {
+        text-align: center;
         font-size: 4vw;
       }
 
       #heart {
-  font-size: 3vh;
-}
+        font-size: 3vh;
+      }
+      
       #preloader {
         position: fixed;
         top: 50%;
@@ -51,7 +65,9 @@
     <div id="preloader">
       <div class="loader"></div>
     </div>
-    <pre id="heart"></pre>
+    <div id="container">
+      <pre id="heart"></pre>
+    </div>
     <script>
       var heart = document.getElementById("heart");
       var result = "";
